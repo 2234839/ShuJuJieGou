@@ -16,7 +16,7 @@ void CreateList(SqList &L,int n){
 }
 
 void DispList(SqList L){
-	cout<<"\nÐÒ´æÕßµÄÎ»ÖÃ£º\n";
+	cout<<"\nå¹¸å­˜è€…çš„ä½ç½®ï¼š\n";
 	for (int i = 0; i < L.length; i++)
 	{
 		cout<<L.data[i]<<"\t";
@@ -31,7 +31,7 @@ int ListDelete(SqList &L,int i,ElemType &e){
 	i--;
 	e=L.data[i];
 	for(j=i;j<L.length-1;j++)
-		L.data[j]=L.data[j+1];//Ç°ÒÆ
+		L.data[j]=L.data[j+1];//å‰ç§»
 	L.length--;
 	return 1;
 }
@@ -39,7 +39,7 @@ int ListDelete(SqList &L,int i,ElemType &e){
 void Josephus(SqList &L,int m,int k){//Josephus(sql,9,29);
 	ElemType e;
 	int s=1,n=0;
-	cout<<"±»É±ÕßµÄÎ»ÖÃ£º\n";
+	cout<<"è¢«æ€è€…çš„ä½ç½®ï¼š\n";
 	for (int i = 1; i <= k; i++)
 	{
 		for (int j = 1; j < m; j++)
