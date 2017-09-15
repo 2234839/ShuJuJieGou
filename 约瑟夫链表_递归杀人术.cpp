@@ -27,10 +27,10 @@ void CreateListR(LiList *&L, int a[], int n) {//尾插法创建单链表
 int josephus(LiList *&L, Node *p,int x) {
 	if (h == x)//递归终止条件
 		return x;
-	if (ii == 8) {//该杀人了
-		ii = 1; //重新开始数数
+	if (ii == 8) {//数到八该杀人了
+		ii = 1; //使下一轮数数正常
 		Node *r;
-		r = p->next;//r成为了第九个节点（第一次 时）
+		r = p->next;//r成为了第九个节点（第一次时）
 
 		if (r->next != NULL)//此判断结构用于链接表尾与表头  防止非法访问地址
 			p->next = r->next;//连接p节点前一个与后面一个个节点
@@ -40,7 +40,7 @@ int josephus(LiList *&L, Node *p,int x) {
 		cout << "杀" << r->data << "号\t";
 		delete r;//删除节点
 
-		if (p->next == NULL)
+		if (p->next == NULL)//后移一位  因为从1开始数，所以不用ii++;
 			p = L->next;
 		else
 			p = p->next;
