@@ -1,7 +1,7 @@
-#include<iostream>
+#include<iostream>//下面不接using会莫名报错
+using namespace std;
 #define MaxSize 50
 #define ElemType int
-using namespace std;
 typedef struct
 {
 	ElemType data[MaxSize];
