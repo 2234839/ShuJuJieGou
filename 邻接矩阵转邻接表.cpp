@@ -62,7 +62,7 @@ int main()
 	邻接表头节点 邻接表[MAX];
 	初始化邻接表(邻接表);
 
-	for (int i = 0; i < MAX; i++)//将邻接表转为邻接矩阵
+	for (int i = 0; i < MAX; i++)//将邻接矩阵转为邻接表
 	{
 		for (int j = 0; j < MAX; j++)
 		{
